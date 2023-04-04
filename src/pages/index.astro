@@ -1,0 +1,38 @@
+---
+import Event from "../components/Event.astro";
+import GDSC from "../components/GDSC.astro";
+import Boilerplate from "../layouts/boilerplate.astro";
+import PageSection from "../layouts/pageSection.astro";
+
+const content:{ title:string } = {title: "GDSC UII"}
+const titlePageStyle = 'text-center flex items-center gap-8 flex-col min-h-[80vh] justify-center';
+const aboutPageStyle = 'text-center flex bg-[#FFD54F] justify-center py-[100px] gap-20 items-center';
+const eventsTimelineStyle = 'relative min-h-screen flex justify-center items-center'
+---
+
+<Boilerplate content={content}>
+  <PageSection additionalStyle={titlePageStyle}>
+    <h1 class="text-8xl font-semibold">
+      Welcome to <GDSC /> UII
+    </h1>
+    <a href="#" class="no-underline block text-xl bg-[#4CAF50] py-3 px-8 transition-shadow shadow-[4px_5px_0px_rgba(0,0,0,1)] hover:shadow-[3px_4px_0px_rgba(0,0,0,1)]">See More</a>
+  </PageSection>
+  <PageSection additionalStyle={aboutPageStyle}>
+    <img src="./people-using-laptop.png" class="shadow-[15px_13px_0px_rgba(0,0,0,1)]" width="300" alt="people-using-laptop">
+    <div class="text-start">
+        <h2 class="text-3xl mb-8">What is Google Solution Challenge?</h2>
+        <p class="max-w-[643px] font-medium">Google Solution Challenge is an activity held annually by Google on a global scale. This competition puts forward the work of appropriate innovations that can solve real problems in human life. Setting up such products requires a long preparation and learning proces.</p>
+    </div>
+  </PageSection>
+  <PageSection additionalStyle={eventsTimelineStyle}>
+    <div class="relative w-full">
+      <div class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 bg-black w-full h-[8px]"></div>
+      <div class="flex justify-between">
+        <Event position={'top'} />
+        <Event position={'bottom'} />
+        <Event position={'top'} />
+        <Event position={'bottom'} />
+      </div>
+    </div>
+  </PageSection>
+</Boilerplate>

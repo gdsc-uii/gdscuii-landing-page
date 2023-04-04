@@ -1,0 +1,7 @@
+---
+const { additionalStyle }:any = Astro.props || '';
+---
+
+<section class={`w-full px-24 ${additionalStyle}`}>
+  <slot />
+</section>

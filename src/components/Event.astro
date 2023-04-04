@@ -1,0 +1,12 @@
+---
+const { position }:any= Astro.props || '';
+const style = {
+  top: 'bottom-[150px] after:absolute after:w-4 after:h-4',
+  bottom: 'top-[150px]'
+}
+---
+
+<article class={`text-center relative p-4 shadow-[4px_5px_0px_rgba(0,0,0,1)] border border-black w-fit max-w-[260px] ${style[position]}`}>
+  <h3 class="text-lg">Info Session</h3>
+  <p class="font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem quibusdam harum nulla? Commodi quaerat quos iusto suscipit quam!</p>
+</article>
