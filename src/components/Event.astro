@@ -1,12 +1,15 @@
 ---
-const { position }:any= Astro.props || '';
+const { position, title, desc, date }:any= Astro.props || '';
 const style = {
-  top: 'bottom-[150px] after:absolute after:w-4 after:h-4',
-  bottom: 'top-[150px]'
+  top: 'lg:bottom-[175px] after:absolute after:w-4 after:h-4 after:bg-black lg:after:left-2/4 lg:after:bottom-[-60px] lg:after:translate-y-2/4 after:rounded-full after:-left-8 after:top-2/4 after:-translate-x-[5px] lg:after:translate-x-0',
+  bottom: 'lg:top-[175px] before:absolute before:w-4 before:h-4 before:bg-black lg:before:left-2/4 lg:before:top-[-60px] lg:before:-translate-y-2/4 before:rounded-full before:-left-8 before:-translate-x-[5px] before:top-2/4 lg:before:translate-x-0',
+  topDate: 'lg:left-2/4 lg:-translate-x-2/4 lg:absolute lg:bottom-[-120px]',
+  bottomDate: 'lg:left-2/4 lg:-translate-x-2/4 lg:absolute lg:top-[-120px]'
 }
 ---
 
-<article class={`text-center relative p-4 shadow-[4px_5px_0px_rgba(0,0,0,1)] border border-black w-fit max-w-[260px] ${style[position]}`}>
-  <h3 class="text-lg">Info Session</h3>
-  <p class="font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem quibusdam harum nulla? Commodi quaerat quos iusto suscipit quam!</p>
+<article class={` text-center relative p-4 shadow-[4px_5px_0px_rgba(0,0,0,1)] border border-black w-fit min-h-[182px] md:min-w-[260px] ${style[position]}`}>
+  <p class={position === 'top' ? style.topDate : style.bottomDate}>{date}</p>
+  <h3 class="text-lg font-semibold">{title}</h3>
+  <p class="font-medium">{desc}</p>
 </article>

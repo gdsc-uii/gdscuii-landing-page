@@ -1,0 +1,13 @@
+---
+const { title, imagePath, description, date }:any = Astro.props;
+---
+
+<div class=" shadow-[15px_13px_0px_rgba(0,0,0,1)] max-w-[290px]">
+    <img class="w-full h-[210px]" src={`${imagePath}`} alt="article pict">
+    <div class="px-6 py-5 bg-white">
+      <p class="mb-2 text-slate-400 font-light">{date}</p>
+      <h3 class="mb-4 font-semibold text-xl md:text-2xl">{title}</h3>
+      <p class="font-medium mb-4">{description}</p>
+      <a class="block group cursor-pointer hover:underline">Read More<span><img class="inline-block ml-2 transition-transform group-hover:rotate-45" src="./arrow-45.svg" alt="arrow"></span></a>
+    </div>
+  </div>

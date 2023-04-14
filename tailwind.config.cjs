@@ -6,8 +6,11 @@ module.exports = {
 			fontFamily: {
 			  'sans': ["'Poppins'", 'sans-serif'],
 			  'open': ["'Open Sans'", 'sans-serif']
-			}
+			},
+			gridTemplateColumns: {
+				'partnersGrid': 'repeat(3, 250px)'
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require('tailwind-scrollbar')],
 };

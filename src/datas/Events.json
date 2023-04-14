@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Info Session",
+    "date": "February 5th",
+    "desc": "In the Info Session, participants who have registered will be given socialization about the Google Solution Challenge and the series of events that will be followed."
+  },
+  {
+    "title": "Workshop Series",
+    "date": "February 11th - March 25th",
+    "desc": "The participants will attend regular workshops, one to two times a week according to the chosen roadmap (Hacker, Hipster, Hustler)."
+  },
+  {
+    "title": "Mentorship",
+    "date": "March 1-25th",
+    "desc": "Participants will be combined into teams of 4 people. Each team will be guided by a mentor who will assist during the product development process."
+  },
+  {
+    "title": "Design Day",
+    "date": "March 5th",
+    "desc": "This is a product design workshop as well as a presentation. Each team will be given a challenge to design their own product."
+  },
+  {
+    "title": "Solution Day",
+    "date": "March 26th",
+    "desc": "This is the highlight of the Google Solution Challenge Camp 2023. Here, each team that has participated in the event from start to finish will present the products that were made before the event."
+  }
+]

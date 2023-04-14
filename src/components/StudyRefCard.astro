@@ -1,0 +1,10 @@
+---
+const { icon, title, description, link } = Astro.props;
+---
+
+
+<article class="bg-white shadow-[10px_9px_0px_rgba(0,0,0,1)] border border-black p-8">
+    <span class="text-4xl"><i class={`ti ${icon}`}></i></span>
+    <h3 class="font-medium text-xl md:text-2xl my-2"><a class="hover:underline" href={link} target="_blank">{title}</a></h3>
+    <p class="text-base">{description}</p>
+</article>

@@ -1,38 +1,215 @@
 ---
+import coreTeams from '../datas/CoreTeams.json';
+import events from '../datas/Events.json';
+import ArticleCard from "../components/ArticleCard.astro";
+import StudyRefCard from "../components/StudyRefCard.astro";
 import Event from "../components/Event.astro";
 import GDSC from "../components/GDSC.astro";
 import Boilerplate from "../layouts/boilerplate.astro";
 import PageSection from "../layouts/pageSection.astro";
+import CoreTeamCard from "../components/CoreTeamCard.astro";
 
-const content:{ title:string } = {title: "GDSC UII"}
-const titlePageStyle = 'text-center flex items-center gap-8 flex-col min-h-[80vh] justify-center';
-const aboutPageStyle = 'text-center flex bg-[#FFD54F] justify-center py-[100px] gap-20 items-center';
-const eventsTimelineStyle = 'relative min-h-screen flex justify-center items-center'
+const content:{ title:string } = {title: "GDSC UII"};
+const articles = [
+  {
+    title:"Menstruaction",
+    imagePath:"./article-1.png",
+    description:"Menstruaction is platform to educate and help woman in needs",
+    date:"January 23rd, 2023"
+  }
+]
+const titlePageStyle = 'md:py-0 text-center flex items-center gap-4 md:gap-8 flex-col min-h-[90vh] justify-center bg-[url(./DSC-Background.png)] bg-cover bg-center mt-[80px]';
+const aboutPageStyle = 'text-center md:flex bg-[#FFD54F] justify-center py-[100px] gap-20 items-center';
+const eventsTimelineStyle = 'min-h-screen py-10 ';
+const articlesSectionStyle = 'min-h-screen bg-[#81C784] py-10';
+const documentationSectionStyle = 'py-10';
+const studyRefSectionStyle = 'py-10 bg-[#E57373]';
+const mediaPartnerStyle = 'py-10 bg-[#81C784]';
 ---
 
 <Boilerplate content={content}>
   <PageSection additionalStyle={titlePageStyle}>
-    <h1 class="text-8xl font-semibold">
-      Welcome to <GDSC /> UII
+    <h1 class="text-2xl lg:text-5xl font-medium">
+      <span class="text-red-500">G</span>oogle <span class="text-blue-500">D</span>eveloper <span class="text-yellow-500">S</span>tudent <span class="text-green-500">C</span>lub <br> Chapter UII
     </h1>
-    <a href="#" class="no-underline block text-xl bg-[#4CAF50] py-3 px-8 transition-shadow shadow-[4px_5px_0px_rgba(0,0,0,1)] hover:shadow-[3px_4px_0px_rgba(0,0,0,1)]">See More</a>
+    <p class="font-normal text-base lg:text-xl md:w-3/4">
+      GDSC UII is a community that focuses on learning Google technology such as Android, Web (Firebase), Cloud Platform, Machine Learning (TensorFlow), and many more. To empower the student to solve the local problem by using technology, and preparing the student to tackle industry.
+    </p>
+    <a href="#" class="no-underline block text-base md:text-xl bg-[#4CAF50] py-3 px-8 transition-shadow shadow-[4px_5px_0px_rgba(0,0,0,1)] hover:shadow-[3px_4px_0px_rgba(0,0,0,1)]">See About Google Solution Challenge</a>
   </PageSection>
-  <PageSection additionalStyle={aboutPageStyle}>
-    <img src="./people-using-laptop.png" class="shadow-[15px_13px_0px_rgba(0,0,0,1)]" width="300" alt="people-using-laptop">
+  <div class="text-center py-4 text-xl font-medium bg-gray-200">
+    <p><span class="text-red-500">G</span>oogle <span class="text-yellow-500">S</span>olution <span class="text-green-500">C</span>hallenge</p>
+  </div>
+  <PageSection additionalStyle={aboutPageStyle} id={"About"}>
+    <img src="./people-using-laptop.png" class="block mb-8 lg:mb-0 shadow-[15px_13px_0px_rgba(0,0,0,1)]" width="300" alt="people-using-laptop">
     <div class="text-start">
-        <h2 class="text-3xl mb-8">What is Google Solution Challenge?</h2>
+        <h2 class="text-2xl md:text-3xl mb-8 font-semibold">What is Google Solution Challenge?</h2>
         <p class="max-w-[643px] font-medium">Google Solution Challenge is an activity held annually by Google on a global scale. This competition puts forward the work of appropriate innovations that can solve real problems in human life. Setting up such products requires a long preparation and learning proces.</p>
     </div>
   </PageSection>
-  <PageSection additionalStyle={eventsTimelineStyle}>
-    <div class="relative w-full">
-      <div class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 bg-black w-full h-[8px]"></div>
-      <div class="flex justify-between">
-        <Event position={'top'} />
-        <Event position={'bottom'} />
-        <Event position={'top'} />
-        <Event position={'bottom'} />
+  <PageSection additionalStyle={eventsTimelineStyle} id={"EventTimeline"}>
+    <h2 class="text-2xl md:text-3xl font-semibold lg:mb-0 mb-4">Events Timeline</h2>
+    <div class="w-full relative flex justify-start lg:justify-center items-center min-h-[650px]">
+      <div class="absolute lg:top-2/4 lg:left-2/4 lg:-translate-x-2/4 lg:-translate-y-2/4 bg-black lg:w-full lg:h-[8px] h-full w-[8px] left-0"></div>
+      <div class="lg:ml-0 ml-8 flex justify-between lg:gap-0 gap-6 lg:flex-row flex-col">
+        {
+          events.map((event, index) => index % 2 === 0 ? <Event position='bottom' title={event.title} desc={event.desc} date={event.date} /> : <Event position='top' title={event.title} desc={event.desc} date={event.date} />)
+        }
       </div>
     </div>
   </PageSection>
+  <div class="text-center py-4 text-xl font-medium bg-gray-200">
+    <p><span class="text-red-500">G</span>oogle <span class="text-yellow-500">S</span>olution <span class="text-green-500">C</span>hallenge</p>
+  </div>
+  <PageSection additionalStyle={articlesSectionStyle} id={"Article"}>
+    <h2 class="text-2xl md:text-3xl font-semibold mb-12">Articles</h2>
+    <div class="text-end">
+      <button class="min-h-[44px] min-w-[44px]" aria-label="previous button" id="prevButton">
+        <img class="rotate-180" src="./arrow.svg" alt="arrow">
+      </button>
+      <button class="min-h-[44px] min-w-[44px]" aria-label="previous button" id="nextButton">
+        <img src="./arrow.svg" alt="arrow">
+      </button>
+    </div>
+    <div class="flex gap-10 py-3" id="articlesContainer">
+      {
+        articles.map(article => <ArticleCard {...article} />)
+      }
+    </div>
+  </PageSection>
+  <PageSection additionalStyle={documentationSectionStyle} id="Documentation">
+    <div class="w-full shadow-[15px_13px_0px_rgba(0,0,0,1)] border border-black py-20 px-4 lg:px-12 flex lg:flex-row lg:gap-0 gap-4 flex-col">
+      <aside class="relative px-4 lg:px-0">
+        <button aria-label="documentation prev button" id="documentationPrevButton" class="text-2xl absolute left-0 top-2/4 lg:translate-y-0 lg:rotate-0 -rotate-90 -translate-y-2/4 lg:left-2/4 lg:-top-8 -translate-x-2/4">
+          <i class="ti ti-chevron-up"></i>
+        </button>
+        <div class="lg:h-[288px] relative overflow-x-scroll lg:overflow-x-hidden w-full lg:w-[70px] max-w-[390px] lg:max-w-min lg:overflow-y-scroll scrollbar-thin scrollbar-track-slate-300 scrollbar-thumb-slate-500" id="sideContainer">
+          <div class="flex lg:flex-col gap-4 transition-transform w-[360px]" id="thumbnailsContainer">
+          </div>
+        </div>
+        <button aria-label="documentation Next Button" id="documentationNextButton" class="text-2xl absolute right-0 top-2/4 lg:top-auto lg:translate-y-0 lg:rotate-0 -rotate-90 -translate-y-2/4 lg:left-2/4 lg:-bottom-8 translate-x-2/4 lg:-translate-x-2/4">
+          <i class="ti ti-chevron-down"></i>
+        </button>
+      </aside>
+      <div class="h-auto w-full lg:w-[470px] lg:ml-4 lg:mr-8">
+        <img id="bigPict" class="h-full w-[470px] block object-cover" src="./article-1.png" alt="article">
+      </div>
+      <div class="flex-1 flex flex-col justify-center">
+        <h3 id="bigPictTitle" class="text-2xl lg:text-3xl font-semibold mb-4">Solution Day</h3>
+        <p id="bigPictDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi consectetur quibusdam cupiditate nesciunt?</p>
+      </div>
+    </div>
+  </PageSection>
+  <PageSection additionalStyle={studyRefSectionStyle}>
+    <h2 class="text-2xl md:text-3xl font-semibold mb-12">Study References</h2>
+    <div class="text-end">
+      <button class="min-h-[44px] min-w-[44px]" aria-label="previous button" id="studyRefsPrev">
+        <img class="rotate-180" src="./arrow.svg" alt="arrow">
+      </button>
+      <button class="min-h-[44px] min-w-[44px]" aria-label="previous button" id="studyRefsNext">
+        <img src="./arrow.svg" alt="arrow">
+      </button>
+    </div>
+    <div class="flex gap-4 md:gap-10 py-3" id="studyRefsContainer">
+      <StudyRefCard icon={'ti-brand-python'}
+      title="Python"
+      link={'https://www.learnpython.org/'}
+      description={'A popular high-level programming language used for web development, data analysis, AI, and scientific computing.'} 
+      />
+      <StudyRefCard icon={'ti-brand-typescript'}
+      title="Typescript"
+      link={'https://www.typescriptlang.org/docs/'}
+      description={'A superset of JavaScript that adds optional static typing and other features to make it more scalable and easier to maintain.'} 
+      />
+      <StudyRefCard icon={'ti-brand-javascript'}
+      title="Javascript"
+      link={'https://learnjavascript.online/'}
+      description={'A widely used client-side scripting language for creating interactive effects and dynamic user interfaces on web pages.'} 
+      />
+      <StudyRefCard icon={'ti-brand-git'}
+      title="Git"
+      link={'https://www.gitkraken.com/learn/git'}
+      description={'A distributed version control system used for tracking changes in source code during software development.'} 
+      />
+      <StudyRefCard icon={'ti-brand-flutter'}
+      title="Flutter"
+      link={'https://flutter.dev/learn'}
+      description={'A mobile app development framework that allows developers to build natively compiled applications for mobile, web, and desktop platforms from a single codebase.'} 
+      />
+      <StudyRefCard icon={'ti-brand-golang'}
+      title="Golang"
+      link={'https://go.dev/doc/effective_go'}
+      description={'A programming language developed by Google that is designed to be simple, efficient, and fast, making it a popular choice for building scalable and high-performance applications.'} 
+      />
+    </div>
+  </PageSection>
+  <PageSection additionalStyle="py-10">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-12">Core Teams</h2>
+    <div class="text-end">
+      <button class="min-h-[44px] min-w-[44px]" aria-label="previous button" id="coreTeamsPrev">
+        <img class="rotate-180" src="./arrow.svg" alt="arrow">
+      </button>
+      <button class="min-h-[44px] min-w-[44px]" aria-label="previous button" id="coreTeamsNext">
+        <img src="./arrow.svg" alt="arrow">
+      </button>
+    </div>
+    <div class="flex gap-4 md:gap-10 py-3" id="coreTeamsContainer">
+      {
+        coreTeams.map((team) => <CoreTeamCard name={team.name} role={team.role} />)
+      }
+    </div>
+  </PageSection>
+  <PageSection additionalStyle={mediaPartnerStyle}>
+    <h2 class="text-white font-medium text-2xl md:text-3xl text-center mb-4">Media Partner</h2>
+    <div class="grid grid-cols-2 md:grid-cols-partnersGrid auto-rows-[125px] gap-4 justify-center">
+      <div class="w-full">
+        <img class="w-full h-full object-contain" src="./media_partners/informatics_logo.webp" alt="logo informatika uii">
+      </div>
+    </div>
+  </PageSection>
+  <script type="module">
+    import { tns } from "../../node_modules/tiny-slider/src/tiny-slider";
+    var slider = tns({
+      container: '#articlesContainer',
+      items: 1.2,
+      slideBy: 'page',
+      prevButton: '#prevButton',
+      nextButton: '#nextButton',
+      loop: false,
+      mouseDrag: true,
+      responsive: {
+        768: {
+          items: 3.3
+        }
+      }
+    });
+    var slider1 = tns({
+      container: '#studyRefsContainer',
+      items: 1.2,
+      slideBy: 'page',
+      prevButton: '#studyRefsPrev',
+      nextButton: '#studyRefsNext',
+      mouseDrag: true,
+      responsive: {
+        768: {
+          items: 4
+        }
+      }
+    });
+    var slider2 = tns({
+      container: '#coreTeamsContainer',
+      items: 1.2,
+      slideBy: 'page',
+      prevButton: '#coreTeamsPrev',
+      nextButton: '#coreTeamsNext',
+      mouseDrag: true,
+      loop: false,
+      responsive: {
+        768: {
+          items: 4
+        }
+      }
+    });
+  </script>
+  <script src="../js/documentationCarousel.js"></script>
 </Boilerplate>

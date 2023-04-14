@@ -2,11 +2,14 @@
 import GDSC from "./GDSC.astro";
 ---
 
-<header class="w-full min-h-[80px] px-24 font-open py-6 flex justify-between items-center">
+<header id="nav-fixed" class="w-full min-h-[80px] px-6 md:px-24 font-open py-6 flex justify-between items-center fixed top-0 bg-white z-[999]">
   <h1 class="text-3xl font-bold"><GDSC /> UII</h1>
-  <nav class="flex justify-center gap-6 font-medium">
-    <a class="block no-underline" href="#">About</a>
-    <a class="block no-underline" href="#">Events Timeline</a>
+  <button class="lg:hidden min-w-[44px] min-h-[44px] block text-4xl" aria-label="menu toggle">
+    <i class="ti ti-menu ti-menu-2"></i>
+  </button>
+  <nav class="hidden lg:flex justify-center gap-6 font-medium">
+    <a class="block no-underline" href="#About">About</a>
+    <a class="block no-underline" href="#EventTimeline">Events Timeline</a>
     <a class="block no-underline" href="#">Articles</a>
     <a class="block no-underline" href="#">Documentation</a>
     <a class="block no-underline" href="#">Study Reference</a>
@@ -14,3 +17,13 @@ import GDSC from "./GDSC.astro";
     <a class="block no-underline" href="#">Media Partner</a>
   </nav>
 </header>
+<script>
+  const navbar = document.querySelector('#nav-fixed');
+  window.onscroll = () => {
+    if (window.scrollY > 20) {
+        navbar.classList.add('shadow-md');
+    } else {
+        navbar.classList.remove('shadow-md');
+    }
+  };
+</script>
