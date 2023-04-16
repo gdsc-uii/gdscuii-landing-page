@@ -1,7 +1,7 @@
 import imagemin from 'imagemin';
 import imageminWebp from 'imagemin-webp';
 
-await imagemin(['./public/media_partners/*.{JPG,png}'], {
+await imagemin(['./public/article_images/*.{JPG,jpg,png}'], {
 	destination: './public',
 	plugins: [
 		imageminWebp({quality: 50})
