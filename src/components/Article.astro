@@ -1,6 +1,4 @@
 ---
-import { log } from "astro/dist/core/logger/core";
-
 const { title, imagePath, description, date }:any = Astro.props;
 ---
 
@@ -10,6 +8,6 @@ const { title, imagePath, description, date }:any = Astro.props;
       <p class="mb-2 text-slate-400 font-light">{date}</p>
       <h3 class="mb-4 font-semibold text-xl md:text-2xl capitalize">{title}</h3>
       <p class="font-medium mb-4">{description}</p>
-      <a class="block group cursor-pointer hover:underline">Read More<span><img class="inline-block ml-2 transition-transform group-hover:rotate-45" src="./arrow-45.svg" alt="arrow"></span></a>
+      <a class="block group cursor-pointer hover:underline" href={title}>Read More<span><img class="inline-block ml-2 transition-transform group-hover:rotate-45" src="./arrow-45.svg" alt="arrow"></span></a>
     </div>
   </div>

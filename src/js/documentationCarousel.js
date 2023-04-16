@@ -89,7 +89,12 @@ documentationNextButton.addEventListener('click', () => {
   }
   bigPictIndex++;
   if( bigPictIndex === 4 ) {
-    sidebarContainer.scrollTo(0,thumbnailsContainerHeight);
+    const isMatched = window.matchMedia('(max-width: 600px)').matches
+    if(isMatched) {
+      sidebarContainer.scrollTo(400,0);
+    } else {
+      sidebarContainer.scrollTo(0,thumbnailsContainerHeight);
+    }
   }
 
   changePict();

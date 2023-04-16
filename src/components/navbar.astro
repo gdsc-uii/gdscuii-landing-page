@@ -4,7 +4,7 @@ import GDSC from "./GDSC.astro";
 
 <header id="nav-fixed" class="w-full min-h-[80px] px-6 md:px-24 font-open py-6 flex justify-between items-center fixed top-0 bg-white z-[999]">
   <h1 class="text-3xl font-bold"><GDSC /> UII</h1>
-  <button class="lg:hidden min-w-[44px] min-h-[44px] block text-4xl" aria-label="menu toggle">
+  <button id="drawerToggle" class="lg:hidden min-w-[44px] min-h-[44px] block text-4xl" aria-label="menu toggle">
     <i class="ti ti-menu ti-menu-2"></i>
   </button>
   <nav class="hidden lg:flex justify-center gap-6 font-medium">
@@ -26,4 +26,13 @@ import GDSC from "./GDSC.astro";
         navbar.classList.remove('shadow-md');
     }
   };
+  const drawerToggle = document.querySelector('#drawerToggle');
+  const drawer = document.querySelector('#drawer');
+  drawerToggle.addEventListener('click', () => {
+    if(drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+    } else {
+        drawer.classList.add('hidden');
+    }
+  })
 </script>

@@ -1,23 +1,17 @@
 ---
 import coreTeams from '../datas/CoreTeams.json';
 import events from '../datas/Events.json';
-import ArticleCard from "../components/ArticleCard.astro";
+import articles from '../datas/Articles.json';
 import StudyRefCard from "../components/StudyRefCard.astro";
 import Event from "../components/Event.astro";
 import GDSC from "../components/GDSC.astro";
 import Boilerplate from "../layouts/boilerplate.astro";
 import PageSection from "../layouts/pageSection.astro";
 import CoreTeamCard from "../components/CoreTeamCard.astro";
+import Article from '../components/Article.astro';
+import Drawer from '../components/Drawer.astro';
 
 const content:{ title:string } = {title: "GDSC UII"};
-const articles = [
-  {
-    title:"Menstruaction",
-    imagePath:"./article-1.png",
-    description:"Menstruaction is platform to educate and help woman in needs",
-    date:"January 23rd, 2023"
-  }
-]
 const titlePageStyle = 'md:py-0 text-center flex items-center gap-4 md:gap-8 flex-col min-h-[90vh] justify-center bg-[url(/DSC-Background.png)] bg-cover bg-center mt-[80px]';
 const aboutPageStyle = 'text-center md:flex bg-[#FFD54F] justify-center py-[100px] gap-20 items-center';
 const eventsTimelineStyle = 'min-h-screen py-10 ';
@@ -28,6 +22,7 @@ const mediaPartnerStyle = 'py-10 bg-[#81C784]';
 ---
 
 <Boilerplate content={content}>
+  <Drawer />
   <PageSection additionalStyle={titlePageStyle}>
     <h1 class="text-2xl lg:text-5xl font-medium">
       <span class="text-red-500">G</span>oogle <span class="text-blue-500">D</span>eveloper <span class="text-yellow-500">S</span>tudent <span class="text-green-500">C</span>lub <br> Chapter UII
@@ -73,7 +68,7 @@ const mediaPartnerStyle = 'py-10 bg-[#81C784]';
     </div>
     <div class="flex gap-10 py-3" id="articlesContainer">
       {
-        articles.map(article => <ArticleCard {...article} />)
+        articles.map(article => <Article {...article} />)
       }
     </div>
   </PageSection>
