@@ -1,21 +1,11 @@
-<div id="drawer" class="w-full fixed top-[90px] hidden">
+<div id="drawer" class="w-full fixed top-[90px] hidden z-[998]">
     <nav class="text-center flex flex-col gap-4 bg-white font-medium py-4">
-        <a class="block no-underline" href="#About">About</a>
-        <a class="block no-underline" href="#EventTimeline">Events Timeline</a>
-        <a class="block no-underline" href="#">Articles</a>
-        <a class="block no-underline" href="#">Documentation</a>
-        <a class="block no-underline" href="#">Study Reference</a>
-        <a class="block no-underline" href="#">Core Team</a>
-        <a class="block no-underline" href="#">Media Partner</a>
+      <a class="block no-underline" href="#About">About</a>
+      <a class="block no-underline" href="#EventTimeline">Events Timeline</a>
+      <a class="block no-underline" href="#Article">Articles</a>
+      <a class="block no-underline" href="#Documentation">Documentation</a>
+      <a class="block no-underline" href="#StudyRef">Study Reference</a>
+      <a class="block no-underline" href="#CoreTeams">Core Team</a>
+      <a class="block no-underline" href="#MediaPartners">Media Partner</a>
       </nav>
 </div>
-<script>
-  const drawer = document.querySelector('#drawer');
-  drawer.addEventListener('click', () => {
-    if(drawer.classList.contains('hidden')) {
-        drawer.classList.remove('hidden');
-    } else {
-        drawer.classList.add('hidden');
-    }
-  })
-</script>
