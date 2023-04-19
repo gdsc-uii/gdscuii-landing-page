@@ -174,7 +174,10 @@ const mediaPartnerStyle = 'py-10 bg-[#81C784]';
       mouseDrag: true,
       responsive: {
         768: {
-          items: 3.3
+          items: 2
+        },
+        1024: {
+          items: 4
         }
       }
     });
@@ -187,6 +190,9 @@ const mediaPartnerStyle = 'py-10 bg-[#81C784]';
       mouseDrag: true,
       responsive: {
         768: {
+          items: 2
+        },
+        1024: {
           items: 4
         }
       }
@@ -198,9 +204,12 @@ const mediaPartnerStyle = 'py-10 bg-[#81C784]';
       prevButton: '#coreTeamsPrev',
       nextButton: '#coreTeamsNext',
       mouseDrag: true,
-      loop: false,
+      loop: true,
       responsive: {
-        768: {
+        375: {
+          items: 2
+        },
+        1024: {
           items: 4
         }
       }
