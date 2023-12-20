@@ -7,6 +7,6 @@ const { title, cover, creator, learningPath }:any = Astro.props;
         <span class={`absolute p-1 rounded-md top-2 border border-white right-2 ${learningPath == "Website" ? "bg-blue-500" : "bg-green-500"} text-[10px] text-white`}>{learningPath}</span>
         <img src={cover} class="block mb-8 lg:mb-0 shadow-[8px_8px_0px_rgba(0,0,0,1)] object-cover w-full h-full" alt="image cover">
     </div>
-    <p class="font-semibold">{title}</p>
+    <p class="font-semibold text-ellipsis w-full overflow-hidden whitespace-nowrap">{title}</p>
     <p class="text-xs">{creator}</p>
 </div>
