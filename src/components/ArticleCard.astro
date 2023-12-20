@@ -1,11 +1,11 @@
 ---
 import { log } from "astro/dist/core/logger/core";
 
-const { title, imagePath, description, date }:any = Astro.props;
+const { title, imagePath, description, date, coverPath }:any = Astro.props;
 ---
 
 <div class=" shadow-[15px_13px_0px_rgba(0,0,0,1)] max-w-[290px]">
-    <img class="w-full h-[210px]" src={imagePath} alt="article pict">
+    <img class="w-full h-[210px] object-cover" src={imagePath} alt="article pict">
     <div class="px-6 py-5 bg-white">
       <p class="mb-2 text-slate-400 font-light">{date}</p>
       <h3 class="mb-4 font-semibold text-xl md:text-2xl capitalize">{title}</h3>

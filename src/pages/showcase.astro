@@ -20,7 +20,7 @@ const showcaseStyle = 'py-10 grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-
     </PageSection>
     <PageSection additionalStyle={showcaseStyle}>
         {
-            projects.map(project => <Project title={project.title} creator={project.creator} cover={project.cover} />)
+            projects.map(project => <Project title={project.title} creator={project.creator} cover={project.cover} learningPath={project.learningPath} />)
         }
     </PageSection>
 </Boilerplate>

@@ -3,6 +3,7 @@
         "title": "menstruaction",
         "description": "Menstruaction is platform to educate and help woman in needs",
         "date": "April 17th, 2023",
-        "imagePath": "/article_images/menstruaction-cover.webp"
+        "imagePath": "/article_images/menstruaction-cover.webp",
+        "coverPath": "/article_images/menstruaction-team.JPG"
     }
 ]
