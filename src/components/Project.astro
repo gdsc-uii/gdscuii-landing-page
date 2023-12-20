@@ -1,0 +1,11 @@
+---
+const { title, cover, creator }:any = Astro.props;
+---
+
+<div>
+    <div class="w-full h-[160px] mb-4">
+        <img src={cover} class="block mb-8 lg:mb-0 shadow-[8px_8px_0px_rgba(0,0,0,1)] object-cover w-full h-full" alt="people-using-laptop">
+    </div>
+    <p class="font-semibold">{title}</p>
+    <p class="text-xs">{creator}</p>
+</div>

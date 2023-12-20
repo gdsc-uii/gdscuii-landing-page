@@ -33,28 +33,23 @@ const mediaPartnerStyle = 'py-10 bg-[#81C784]';
     <a href="#" class="no-underline block text-base md:text-xl bg-[#4CAF50] py-3 px-8 transition-shadow shadow-[4px_5px_0px_rgba(0,0,0,1)] hover:shadow-[3px_4px_0px_rgba(0,0,0,1)]">See About Google Solution Challenge</a>
   </PageSection>
   <div class="text-center py-4 text-xl font-medium bg-gray-200">
-    <p><span class="text-red-500">G</span>oogle <span class="text-yellow-500">S</span>olution <span class="text-green-500">C</span>hallenge</p>
+    <p><GDSC /> UII Showcase</p>
   </div>
   <PageSection additionalStyle={aboutPageStyle} id={"About"}>
-    <img src="./people-using-laptop.png" class="block mb-8 lg:mb-0 shadow-[15px_13px_0px_rgba(0,0,0,1)]" width="300" alt="people-using-laptop">
-    <div class="text-start">
-        <h2 class="text-2xl md:text-3xl mb-8 font-semibold">What is Google Solution Challenge?</h2>
-        <p class="max-w-[643px] font-medium">Google Solution Challenge is an activity held annually by Google on a global scale. This competition puts forward the work of appropriate innovations that can solve real problems in human life. Setting up such products requires a long preparation and learning proces.</p>
-    </div>
-  </PageSection>
-  <PageSection additionalStyle={eventsTimelineStyle} id={"EventTimeline"}>
-    <h2 class="text-2xl md:text-3xl font-semibold lg:mb-0 mb-4">Events Timeline</h2>
-    <div class="w-full relative flex justify-start lg:justify-center items-center min-h-[650px]">
-      <div class="absolute lg:top-2/4 lg:left-2/4 lg:-translate-x-2/4 lg:-translate-y-2/4 bg-black lg:w-full lg:h-[8px] h-full w-[8px] left-0"></div>
-      <div class="lg:ml-0 ml-8 flex justify-between lg:gap-0 gap-6 lg:flex-row flex-col">
-        {
-          events.map((event, index) => index % 2 === 0 ? <Event position='bottom' title={event.title} desc={event.desc} date={event.date} /> : <Event position='top' title={event.title} desc={event.desc} date={event.date} />)
-        }
-      </div>
+    <!-- <img src="./people-using-laptop.png" class="block mb-8 lg:mb-0 shadow-[15px_13px_0px_rgba(0,0,0,1)]" width="300" alt="people-using-laptop"> -->
+    <div class="text-center">
+        <div class="w-[110px] mx-auto h-[110px] bg-white flex justify-center items-center p-4 border-4 mb-8 border-blue-500 rounded-full overflow-hidden">
+          <img src="./logo.png" alt="logo" class="w-full">
+        </div>
+        <h2 class="text-2xl md:text-3xl mb-8 font-semibold"><GDSC /> UII Year-End Showcase</h2>
+        <p class="max-w-[643px] font-medium mb-8">
+          Dive into a showcase of our members' projects. From stunning designs to innovative ideas, each project tells a unique story of creativity and skill. Explore the gallery and witness the magic of collaboration. Discover the passion and excellence that define our community.
+        </p>
+        <a href="#" class="no-underline inline-block text-base md:text-xl bg-[#4CAF50] py-3 px-4 transition-shadow shadow-[4px_5px_0px_rgba(0,0,0,1)] hover:shadow-[3px_4px_0px_rgba(0,0,0,1)]">See Projects</a>
     </div>
   </PageSection>
   <div class="text-center py-4 text-xl font-medium bg-gray-200">
-    <p><span class="text-red-500">G</span>oogle <span class="text-yellow-500">S</span>olution <span class="text-green-500">C</span>hallenge</p>
+    <p><GDSC /> UII Showcase</p>
   </div>
   <PageSection additionalStyle={articlesSectionStyle} id={"Article"}>
     <h2 class="text-2xl md:text-3xl font-semibold mb-12">Articles</h2>
