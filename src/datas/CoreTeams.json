@@ -1,122 +1,28 @@
 [
-  {
-    "name": "Amal Yulianto",
-    "role": "Lead"
-  },
-  {
-    "name": "Zahwa Almira",
-    "role": "Secretary"
-  },
-  {
-    "name": "Nadira Adiva",
-    "role": "Treasurer"
-  },
-  {
-    "name": "Syuhda Fakhrunnisa",
-    "role": "EPR Manager"
-  },
-  {
-    "name": "Fajar Arya",
-    "role": "Community Manager"
-  },
-  {
-    "name": "Dhimassultan Dutasmara",
-    "role": "Creative and Promotion Manager"
-  },
-  {
-    "name": "Raihan Rifaldi",
-    "role": "Academic Manager"
-  },
-  {
-    "name": "Adyuta Indra",
-    "role": "EPR"
-  },
-  {
-    "name": "Bintang Rahmatullah",
-    "role": "EPR"
-  },
-  {
-    "name": "Nabila Putri",
-    "role": "EPR"
-  },
-  {
-    "name": "Patandya Wisnu",
-    "role": "EPR"
-  },
-  {
-    "name": "Novera Prestiana",
-    "role": "EPR"
-  },
-  {
-    "name": "Sabrina Adelia",
-    "role": "EPR"
-  },
-  {
-    "name": "Muhammad Haris",
-    "role": "Community"
-  },
-  {
-    "name": "Inas Ainun Shafia",
-    "role": "Community"
-  },
-  {
-    "name": "Nadhira Nurul Azka",
-    "role": "Community"
-  },
-  {
-    "name": "Kartika Salma",
-    "role": "Creative and Promotion"
-  },
-  {
-    "name": "Anggito Sulistyo",
-    "role": "Creative and Promotion"
-  },
-  {
-    "name": "Luthfia Fitriani",
-    "role": "Creative and Promotion"
-  },
-  {
-    "name": "Fahrur Rozi",
-    "role": "Creative and Promotion"
-  },
-  {
-    "name": "Ramadzikri Rafansya",
-    "role": "Creative and Promotion"
-  },
-  {
-    "name": "Rizki Siraj",
-    "role": "Academic"
-  },
-  {
-    "name": "Gabriel Imam",
-    "role": "Academic"
-  },
-  {
-    "name": "Ghifari Adib",
-    "role": "Academic"
-  },
-  {
-    "name": "Ihsan Syafiul Umam",
-    "role": "Academic"
-  },
-  {
-    "name": "Aufa Asmawy",
-    "role": "Academic"
-  },
-  {
-    "name": "Helmy Fachreza",
-    "role": "Academic"
-  },
-  {
-    "name": "Intan Nabila",
-    "role": "Academic"
-  },
-  {
-    "name": "Hanuga Fathur",
-    "role": "Academic"
-  },
-  {
-    "name": "Devano Zaidan",
-    "role": "Academic"
-  }
+  {"name":"Zahwa","role":"Lead"},
+    {"name":"Novera","role":"Secretary"},
+    {"name":"Adel","role":"Finance"},
+    {"name":"Anggito","role":"Creative Manager"},
+    {"name":"Oji","role":"Creative"},
+    {"name":"Elang","role":"Creative"},
+    {"name":"Buny","role":"Creative"},
+    {"name":"Amel","role":"Creative"},
+    {"name":"Wisnu","role":"Community Manager"},
+    {"name":"Wafa","role":"Community"},
+    {"name":"Naura","role":"Community"},
+    {"name":"Wildan","role":"Community"},
+    {"name":"Bila","role":"EPR Manager"},
+    {"name":"Jundi","role":"EPR"},
+    {"name":"Tiara","role":"EPR"},
+    {"name":"Alfath","role":"EPR"},
+    {"name":"Nuges","role":"EPR"},
+    {"name":"Hanif","role":"EPR"},
+    {"name":"Siraj","role":"Academic Manager"},
+    {"name":"Jeky","role":"Academic"},
+    {"name":"Adyuta","role":"Academic"},
+    {"name":"Jean","role":"Academic"},
+    {"name":"Bintang","role":"Academic"},
+    {"name":"Afsar","role":"Academic"},
+    {"name":"Azis","role":"Academic"},
+    {"name":"Bagas","role":"Academic"}
 ]

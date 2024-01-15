@@ -1,56 +1,104 @@
 [
     {
         "title": "DapGrammer",
-        "cover": "https://drive.google.com/uc?export=view&id=1yu8XG1m6qJssvAfzAoX9LwZLiJx2EwX3",
+        "cover": "daffa",
         "creator": "M. Daffa Raihan",
         "learningPath": "Website"
     },
     {
         "title": "Web Portofolio",
-        "cover": "https://drive.google.com/uc?export=view&id=1uCIsdWaHh9aBeBLyL3RnR-atjAhvZ3Rr",
+        "cover": "wilda",
         "creator": "Wilda Maulida",
         "learningPath": "Website"
     },
     {
         "title": "Web Biodata",
-        "cover": "https://drive.google.com/uc?export=view&id=1-Qf2iG_gKVLns_1dsKeV2xRBpQ4jsblx",
+        "cover": "iryana",
         "creator": "Iryana Salsabillah",
         "learningPath": "Website"
     },
     {
         "title": "Personal Portfolio (still WIP since Js is such a..)",
-        "cover": "https://drive.google.com/uc?export=view&id=1OhaQ_lnbn2xCmdypJuyCat5-l-dDEiGq",
+        "cover": "noir",
         "creator": "Ahmad Aiman Zumar Prawirosunoto",
         "learningPath": "Website"
     },
     {
         "title": "Rio's First Personal Portfolio",
-        "cover": "https://drive.google.com/uc?export=view&id=1xRiV_QJ9lq4KutiqNh-Qm_Ni3MDiRkDs",
+        "cover": "caesar",
         "creator": "Caesario Prasetyo Unggul",
         "learningPath": "Website"
     },
     {
         "title": "Personal Website",
-        "cover": "https://drive.google.com/uc?export=view&id=1XimuvWm2Oto7IEtoF30Ar5WpyLPQz6ZW",
+        "cover": "adinda",
         "creator": "Adinda Mustikaningtyas",
         "learningPath": "Website"
     },
     {
         "title": "Gabut (chatbot mobile)",
-        "cover": "https://drive.google.com/uc?export=view&id=1_e9af9m2XVV87wAJlp59rR2rQsP9jzr2",
+        "cover": "wahyan",
         "creator": "Ananda Wahyan Abdillah",
         "learningPath": "Mobile"
     },
     {
         "title": "My Personal Website",
-        "cover": "https://drive.google.com/uc?export=view&id=1nu1gg7KRn6QtwlYWBmWjvlNiMEzEJhyc",
+        "cover": "salima",
         "creator": "Salima Fadhilatus Sholihah",
         "learningPath": "Website"
     },
     {
         "title": "Portfolio Tania Atika",
-        "cover": "https://drive.google.com/uc?export=view&id=1G-IgY4fFqXhzQD4mgih3lSz8iXQId_aZ",
+        "cover": "tania",
         "creator": "Tania Atika",
+        "learningPath": "Website"
+    },
+    {
+        "title": "FR Personal Web",
+        "cover": "fadya",
+        "creator": "Fadya Raudha Izzati",
+        "learningPath": "Website"
+    },
+    {
+        "title": "Riva Aiyatsa's Portfolio",
+        "cover": "riva",
+        "creator": "Riva Aiyatsa",
+        "learningPath": "Website"
+    },
+    {
+        "title": "Personal Portfolio",
+        "cover": "dzaki",
+        "creator": "Muhammad Dzaki Wirayuda",
+        "learningPath": "Website"
+    },
+    {
+        "title": "Personal Portfolio Web",
+        "cover": "maritsa",
+        "creator": "Taqya Maritsa",
+        "learningPath": "Website"
+    },
+    {
+        "title": "ALMA'S PORTFOLIO (^_^)",
+        "cover": "alma",
+        "creator": "Alma Nurul Salma",
+        "learningPath": "Website"
+    },
+    {
+        "title": "Portofolio | Aliya Hanifa Windihana",
+        "cover": "aliya",
+        "creator": "Aliya Hanifa Windihana",
+        "learningPath": "Website"
+    },
+    {
+        "title": "Naylannajwa's Portfolio Website",
+        "cover": "nayla",
+        "creator": "Naylannajwa Jihana Umma",
+        "learningPath": "Website"
+    },
+    {
+        "title": "Pilpres Sehat",
+        "cover": "pilpres",
+        "creator": "Muhammad Rizki Eka Pratama",
         "learningPath": "Website"
     }
 ]
